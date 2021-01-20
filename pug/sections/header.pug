@@ -1,0 +1,61 @@
+// header
+header.header
+
+	.container
+
+		.header__row.flex
+
+			.menu-toggle
+				.menu-ic
+
+			ul.menu.main-menu.flex.list
+				-
+					var nav = [
+						{"link": "Home", "href": "index.html"},
+						{
+							"link": "Produkte",
+							"href": "produkte.html",
+							"submenu": [
+								{"link": "b1", "href": "#"},
+								{"link": "b2", "href": "#"},
+								{"link": "b3", "href": "#"}
+							]
+						},
+						{"link": "Referenzen", "href": "tpUnterseite.html"},
+						{"link": "Planung", "href": "planung.html"},
+						{"link": "Team", "href": "Musterkuchen.html"},
+						{"link": "Technik ", "href": "Musterkuchen.html"},
+						{"link": "Partner", "href": "partner.html"},
+						{"link": "Blog", "href": "musterkuche123.html"},
+						{"link": "Kontakt", "href": "tpUnterseite.html"}
+					]
+				each item in nav
+					li(class= page==item.link ? 'active' : '')
+						a(href= item.href)= item.link
+						if item.submenu
+							i.submenu-ic
+							ul.submenu.list
+								- for(let i = 0; i < item.submenu.length; i++)
+									li
+										a(href= item.submenu[i].href)= item.submenu[i].link 
+
+				
+			a.el.flex-center(href="#")
+
+			+logo
+
+		// /.header__row.flex
+
+
+	// /.container
+
+// /.header
+
+
+
+
+
+
+
+
+

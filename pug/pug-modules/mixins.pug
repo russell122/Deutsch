@@ -1,0 +1,119 @@
+
+mixin logo
+	.logo
+		if page == 'Home'
+			img.img(src="img/logo.svg", alt="Bulthaup")
+		else
+			a(href="index.html")
+				img.img(src="img/logo.svg", alt="Bulthaup")
+
+
+
+
+mixin section(direction, imgArr, title, txtArr, btn)
+	.section-margin.section-margin-btn
+
+		.container
+
+			.row.custom-row(class= direction=='text-right' ? 'custom-row--reverse' : '')
+				.col-12.col-lg-6.section-margin-btn__text
+					.section-text(class= direction=='text-right' ? 'section-text--right' : 'section-text--left')
+						h2.title-2 !{title}
+						- for(let j= 0; j < txtArr.length; j++)
+							p !{txtArr[j]}
+						if btn
+							a.button(href="#") ![btn]
+				.col-12.col-lg-6.section-margin-btn__img
+					- for(let i = 0; i < imgArr.length; i++)
+						img.img(src= imgArr[i], alt="alt")
+mixin section-double(direction, imgArr, title, txtArr, btn)
+	.section-margin.section-margin-btn
+
+		.container
+
+			.row.custom-row(class= direction=='text-right' ? 'custom-row--reverse' : '')
+				.col-12.col-lg-6.section-margin-btn__text
+					.section-text(class= direction=='text-right' ? 'section-text--right' : 'section-text--left')
+						h2.title-2 !{title}
+						- for(let j= 0; j < txtArr.length; j++)
+							p !{txtArr[j]}
+						if btn
+							a.button(href="#") ![btn]
+				.col-12.col-lg-6.section-margin-btn__img
+					.row
+						- for(let i = 0; i < imgArr.length; i++)
+							.col-6.col-lg-12.section-double__ind
+								img.img(src= imgArr[i], alt="alt")
+
+mixin section-double-line(direction, imgArr, title, txtArr, btn)
+	.section-margin.section-margin-btn
+
+		.container
+
+			.row.custom-row(class= direction=='text-right' ? 'custom-row--reverse' : '')
+				.col-12.col-lg-6.section-margin-btn__text
+					.section-text(class= direction=='text-right' ? 'section-text--right' : 'section-text--left')
+						h2.title-2 !{title}
+						- for(let j= 0; j < txtArr.length; j++)
+							p !{txtArr[j]}
+						if btn
+							a.button(href="#") ![btn]
+				.col-12.col-lg-6.section-margin-btn__img
+					.row
+						- for(let i = 0; i < imgArr.length; i++)
+							.col-6.col-lg-6.section-double__ind
+								img.img(src= imgArr[i], alt="alt")
+
+mixin section-btn(direction, imgArr, title, txtArr, btn, btnDesc, subTitle)
+	.section-margin.section-margin-btn
+
+		.container
+
+			.row.custom-row(class= direction=='text-right' ? 'custom-row--reverse' : '')
+				.col-12.col-lg-6.section-margin-btn__text
+					.section-text(class= direction=='text-right' ? 'section-text--right' : 'section-text--left')
+						h2.title-2 !{title}
+						if subTitle
+							h2.sub-title !{subTitle}
+						- for(let j= 0; j < txtArr.length; j++)
+							p !{txtArr[j]}
+						if btn
+							a.button(href="#") !{btnDesc}
+				.col-12.col-lg-6.section-margin-btn__img
+					- for(let i = 0; i < imgArr.length; i++)
+						img.img(src= imgArr[i], alt="alt")
+
+
+mixin section-card(imgArr, title, btn, btnDesc)
+	.col-6.col-lg-4.section-card__elem.section-margin-btn__img
+		- for(let i = 0; i < imgArr.length; i++)
+			img.img.section-card-img(src= imgArr[i], alt="alt")
+		.section-text.section-margin-btn__text
+			h2.title-2 !{title}
+			if btn
+				a.button(href="#") !{btnDesc}
+
+
+
+
+		// /.container
+
+	// /.section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

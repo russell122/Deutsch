@@ -1,0 +1,23 @@
+extends layout/main
+
+block variables
+	- let page = 'Home'
+	- let title = 'Bulthaup - Starseite'
+
+
+
+block content
+	include sections-index/hero
+	include sections-index/content
+
+
+
+
+
+//- block libs-css
+	// библиотека.css
+	link(rel="stylesheet" href="libs/library/library.css")
+
+//- block libs-js
+	// библиотека.js
+	script(src="libs/library/library.js")

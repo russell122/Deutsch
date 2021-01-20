@@ -1,0 +1,22 @@
+.product-menu-wrap
+	.container
+
+		ul.menu.product-menu.flex.list
+			-
+				var pNav = [
+					{"link": "b3", "href": "#"},
+					{"link": "Materialität", "href": "#"},
+					{"link": "Formen und Funktionen", "href": "#"},
+					{"link": "Ausstattung ", "href": "#"},
+				]
+			each item, i in pNav
+				li(class= i==0 ? 'active' : '')
+					a(href= item.href)= item.link
+
+
+	// /.container
+
+
+
+
+// /.product-menu-wrap

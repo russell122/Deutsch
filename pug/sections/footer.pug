@@ -1,0 +1,101 @@
+// footer
+footer.footer
+
+	.container
+
+
+		.row
+			.col-6.col-lg-5
+				.footer__title Navigation
+				ul.footer__list.flex.list
+					-
+						var fnav = [
+							{"link": "Startseite"},
+							{"link": "Planung"},
+							{"link": "Partner"},
+							{"link": "Produkte"},
+							{"link": "Team"},
+							{"link": "Blog"},
+							{"link": "Referenzen"},
+							{"link": "Technik"},
+							{"link": "Kontakt"}
+						]
+					each item in fnav
+						li
+							a(href="#")= item.link
+			.col-6.col-lg-3.col-xl-4
+				.footer__title Produkte
+				ul.footer__list.list
+					-
+						var fnav = [
+							{"link": "b3"},
+							{"link": "b2"},
+							{"link": "b1"}
+						]
+					each item in fnav
+						li
+							a(href="#")= item.link
+			.col-12.col-lg-4.col-xl-3
+				.footer__title.hide-md Kontakt
+				ul.footer__list.footer__info.list
+					li
+						address Mittelweg 169 20148 Hamburg
+					li
+						a(href="tel:04035717760") 040 / 35 71 77 60
+					li
+						a(href="mailto:kontakt@city-tor-hamburg.de") kontakt@city-tor-hamburg.de
+
+		
+
+	// /.container
+
+	.footer__bottom
+		.container
+			.row
+				.col-12.col-sm-auto
+					ul.socials.flex.list
+						li
+							a(href="#", target="_blank")
+								i.font-ic.font-facebook
+						li
+							a(href="#", target="_blank")
+								i.font-ic.font-pinterest
+						li
+							a(href="#", target="_blank")
+								i.font-ic.font-instagram
+				.col-12.col-sm-auto
+					a.footer__link(href="#") Datenschutzerklärung
+					a.footer__link(href="#") Impressum
+		
+
+// /.footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+.product-menu-wrap
+	.container
+
+		ul.menu.product-menu.flex.list
+			-
+				var pNav2 = [
+					{"link": "Technik", "href": "#"},
+					{"link": "Gaggenau", "href": "#"},
+					{"link": "Miele", "href": "#"},
+					{"link": "Bora ", "href": "#"},
+					{"link": "Siemens ", "href": "#"},
+				]
+			each item, i in pNav2
+				li(class= i==0 ? 'active' : '')
+					a(href= item.href)= item.link
+
+
+	// /.container
+
+
+
+
+// /.product-menu-wrap

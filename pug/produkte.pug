@@ -1,0 +1,24 @@
+extends layout/main
+
+block variables
+	- let page = 'Produkte'
+	- let title = 'Bulthaup - Produkte'
+	- let productMenu = true
+
+
+
+block content
+	include sections-produkte/hero
+	include sections-produkte/content
+
+
+
+
+
+//- block libs-css
+	// библиотека.css
+	link(rel="stylesheet" href="libs/library/library.css")
+
+//- block libs-js
+	// библиотека.js
+	script(src="libs/library/library.js")
